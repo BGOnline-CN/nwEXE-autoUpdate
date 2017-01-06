@@ -1,0 +1,39 @@
+<div ng-controller="UpdateController">
+    <div class="bgo-panel bgo-div-glass bgo-box-shadow" style="width: 500px;margin: 0 auto;margin-top: 50px;border: none;position: relative;">
+        <header class="topnavbar-wrapper" style="position: absolute;left: 0;padding: 0;border: none;">
+            <nav role="navigation" class="navbar topnavbar" style="background: none;">
+                <div class="nav-wrapper" style="box-shadow: none;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="loginClose" onclick="win.minimize();">
+                                <em class="fa fa-minus"></em>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="loginClose" onclick="win.close();">
+                                <em class="fa fa-close"></em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div ng-if="!isUpdate">
+            <p style="text-align: center;margin: 0;font-size: 1.2em;font-weight: bold;">系统保护</p>
+            <p id="progress" style="text-align: center;padding: 130px 0 100px;">
+                正在进行系统加密保护
+                <span></span>
+            </p>
+        </div>
+        <div ng-if="isUpdate">
+            <p class="title" style="text-align: center;margin: 0;font-size: 1.2em;font-weight: bold;">升级新版本</p>
+            <p id="progress" style="text-align: center;padding: 70px 0 50px;">
+                <span style="font-size: 5em;"></span>%
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('body').addClass('win-transparent');
+</script>
+
